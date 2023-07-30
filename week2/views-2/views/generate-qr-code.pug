@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+  form(method='POST' action='/generate-qr-code')
+    h3 Height:
+    input(type='number' name='height')
+    br
+    h3 Width:
+    input(type='number' name='width')
+    br
+    h4 Value:
+    input(type='text' name='value')
+    br
+    button(type='submit') Generate QR Code
+  if imgURL
+    img(src=imgURL)

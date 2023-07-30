@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  form(method='post' action='/generate-image')
+    h3 Height:
+    input(type='number' name="height")
+    br
+    h3 Width:
+    input(type='number' name="width")
+    br
+    h4 Blur:
+    input(type='number' name="blur")
+    br
+    h4 Grayscale:
+    input(type='checkbox' name="grayscale")
+    br
+    button(type="submit") Generate Image
+    if imgURL
+      img(src=imgURL)
