@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  h1 Hi #{name}
+  h2= loggedIn
+
+  p 1 + 1 = #{1+1}
+
+  p.
+    This is multi-line text 
+    This is the second line
+
+  ul 
+    li item 1
+    li item 2
+    li item 3
+
+  | 
+  |
+  img(src=img_url)
+  | 
+  |
+  br
+  
+  a(href=img_url) Picsum image link

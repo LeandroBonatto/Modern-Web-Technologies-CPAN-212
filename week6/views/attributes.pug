@@ -1,0 +1,23 @@
+extends layout
+
+block content 
+    h1 Attributes 
+
+    h2#headingID Heading ID
+
+    p.blue-text This text is blue
+    p.blue-text This text is still blue
+
+    h2#divID
+    .displaybox
+
+    - const myClasses = ["class1", "class2", "class3"]
+    - myClasses = "class4"
+    h1.myDiv(class=myClasses)
+
+    - let myStyles = {"color", "white", "background-color": "blue"}
+    #div2(style=myStyles)
+    p(style={"text-align": "center"}) Text inside Div
+
+    - let myAttributes = {"src": img_url}
+    img&attributes(myAttributes)

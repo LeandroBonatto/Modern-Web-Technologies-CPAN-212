@@ -1,0 +1,25 @@
+extends layout
+
+block content 
+    h1 Loops
+
+    ul
+    each x in {1, 2, 3, 5, 10}
+    li Item #{x}
+
+    each value, index in [10, 20, 40, 60, 100]
+        p Index #{index} Value #{value}
+
+    br
+
+    h2 Places Visited
+    for place in places
+    li= places
+
+    br
+
+    h2 Grades
+    for grade, course in grades
+        p Courses #{Courses}
+    else
+        strong No grades

@@ -1,0 +1,24 @@
+mixin comment(commentData)
+  .comment
+    if commentData.adminPost
+      em Posted by Admin
+    .date= commentData.date
+    .author= commentData.author 
+    .text= commentData.text
+
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    include partials/navbar
+    br
+  body
+    block content
+
+  - const commentData = {"date": "04-02-2022", "author": "Humber", "text": "Copyright © 2022"}
+    +comment(commentData)
+    br 
+    - const commentData2 = {"adminPost": true, "date": "10-12-2022", "author": "York", "text": "Copyright © 2022"}
+    +comment(commentData2)

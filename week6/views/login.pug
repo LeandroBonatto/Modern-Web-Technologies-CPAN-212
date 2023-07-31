@@ -1,0 +1,20 @@
+extends layout
+
+block content 
+    h1 Login
+
+    label Email
+    input(
+        type="text"
+        disabled=false
+    )
+    br
+    label(style={"color": "red"}) Password
+    input(
+        type="Password"
+    )
+    br 
+    input(
+        type="submit"
+        value="Submit"
+    )
