@@ -1,0 +1,29 @@
+extends layout
+block content 
+    h1 Edit book
+
+    form(method="POST")
+    #form-group 
+        label Title:
+        input.form-control(name="title", type="text" value=title.title)
+
+    #form-group 
+        label Author:
+        input.form-control(name="author", type="text" value=book.title)
+
+    #form-group 
+        label Pages:
+        input.form-control(name="pages", type="number" value=pages.title)
+
+    #form-group 
+    label Rating:
+    input.form-control(name="rating", type="number" value=ratign.title)
+
+    #form-group 
+        label Genres:
+        for genre in genres
+            input.form-control(name="genres", type="checkbox" value=genre checked=true)
+            else
+            input.form-control(name="genres", type="checkbox" value=genre)
+            label= genre
+    
