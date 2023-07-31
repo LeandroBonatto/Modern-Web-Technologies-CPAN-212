@@ -1,0 +1,16 @@
+extends layout 
+block content 
+    h1 Bookstore
+    for book in books 
+        label Title: 
+        a(href="/book/" + book._id) #{book.title}
+        p Author: #{book.author}
+        p Pages: #{book.pages}
+        p Rating: #{book.rating}
+        p Genres: #{book.genres}
+        ul 
+        for genre in book.genres
+            li= genre
+        
+        br
+        br
