@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Movie Search Results
+
+  // render each movie as a list item
+  if (movies && movies.length > 0)
+    ul.list-group
+      each movie in movies
+        li.list-group-item
+          a(href=`/movies/${movie.id}`)= movie.name
+  else
+    p No results found.

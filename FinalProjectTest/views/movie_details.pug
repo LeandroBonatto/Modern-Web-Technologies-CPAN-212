@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 = movie.name
+
+    p Name: #{movie.name}
+    p Description: #{movie.description}
+    p Year: #{movie.year}
+    p Genres: #{movie.genres}
+    p Rating: #{movie.rating}
+
+a(href=`/movies/${movie.id}/edit`) Edit Movie

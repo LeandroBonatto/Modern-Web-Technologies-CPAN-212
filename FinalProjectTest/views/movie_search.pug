@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Search Movies
+
+  if (errors)
+    .alert.alert-danger
+      each error in errors
+        p= error.message
+
+
+  form(method='POST', action='/movies/search')
+    .form-group
+      label(for='name') Name
+      input#name.form-control(type='text', name='name')
+    button.btn.btn-primary(type='submit') Search
