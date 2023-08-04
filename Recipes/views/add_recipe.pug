@@ -1,0 +1,30 @@
+extends layout
+
+block content 
+    if errors
+    for error in errors 
+        p(style="color:red") #{error.msg}
+    h1 Add recipe
+
+    form(method="POST")
+    #form-group 
+        label Name:
+        input.form-control(name="name", type="text")
+
+    #form-group 
+        label Description:
+        input.form-control(name="description", type="text")
+
+    #form-group 
+        label Difficulty:
+        input.form-control(name="difficulty", type="number")
+
+    #form-group 
+    label Ingredients:
+    input.form-control(name="ingredients", type="text")
+
+    #form-group 
+    label Steps:
+    input.form-control(name="steps", type="number")
+    
+    input.form-control(type="submit", value="Submit")

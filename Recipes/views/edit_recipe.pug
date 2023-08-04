@@ -1,0 +1,29 @@
+extends layout
+
+block content 
+    h1 Edit recipe
+
+    form(method="POST")
+    h1 edit recipe
+
+    form(method="POST")
+    #form-group 
+        label Name:
+        input.form-control(name="name", type="text")
+
+    #form-group 
+        label Description:
+        input.form-control(name="description", type="text")
+
+    #form-group 
+        label Difficulty:
+        input.form-control(name="difficulty", type="number")
+
+    #form-group 
+    label Ingredients:
+    input.form-control(name="ingredients", type="text")
+
+    #form-group 
+    label Steps:
+    input.form-control(name="steps", type="number")
+    
