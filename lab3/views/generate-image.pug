@@ -1,0 +1,23 @@
+extends layout
+
+html
+  head
+    title= Generate Image Page
+  body
+    h1= title
+    p Welcome to #{title}
+
+    form(method='post' action='/generate-image')
+
+      input(type="number" name="Height" placeholder="Height")
+      br
+      input(type="number" name="Width" placeholder="Width")
+      br
+      input(type="number" name="Blur" placeholder="Blur")
+      br
+      input(type="checkbox" name="grayscale" placeholder="Grayscale")
+      br
+      button(type="submit" value="Generate Image")
+      
+      img(src=imageUrl)
+
