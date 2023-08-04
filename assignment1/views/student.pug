@@ -1,0 +1,27 @@
+extends layout 
+
+block content
+    h1 Student
+    
+    h1 = id
+    p #{id}
+
+    h1 = name
+    p #{name}
+
+    h1 = departament
+    p #{departament}
+
+    h1 = description
+    p #{description}
+
+    h1 = semester
+    p #{semester}
+
+    h1 Courses Enrolled:
+        ul
+            li= course.name
+    
+    h1 Courses Completed:
+        ul
+            li= course.name

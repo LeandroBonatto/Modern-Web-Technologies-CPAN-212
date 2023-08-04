@@ -1,0 +1,14 @@
+extends layout 
+
+block content
+    h1 Student and Ongoing Course List
+
+    h1 List of Students and Ongoing Courses
+
+    h1 Students List:
+      each student in students
+          li = name
+
+    h1 Ongoing Courses
+        each student in ongoingCourses
+            li = name
