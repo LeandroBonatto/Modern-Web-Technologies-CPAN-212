@@ -1,0 +1,23 @@
+extends layout 
+
+block content 
+    h1= book.title 
+    h5 Written by #{book.author}
+    h5 Posted by #{book.posted_by}
+    p Rating: #{book.rating}
+    p Pages: #{book.pages}
+    p description: #{description}
+    p Publisher: #{publisher}
+    p Publish date: #{publishDate}
+    label Genres:
+    ul
+    each genre in book.genres
+        li #{genre}
+        
+    hr
+    if user 
+        if user._id == book.posted_by 
+        
+    a.btn.btn-default(href="/book/edit/" + book._id) Edit Book
+    br
+    a.btn.delete-book(href="#", data-id=book._id) Delete Book

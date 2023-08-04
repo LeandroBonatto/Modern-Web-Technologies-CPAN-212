@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+    h1= Search List isbn
+    form(method="search" action="/book/search/")
+        #form-group 
+            label isbn:
+            input.form-control(name="isbn" type="text" value=book.isbn)
+    br
+        button(type='submit') Search
+
