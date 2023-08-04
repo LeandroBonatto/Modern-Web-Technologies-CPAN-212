@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{movie.name} Recipe
+  p Genres: #{movie.genres}
+  p Rating: #{movie.rating}
+
+  input.btn.btn-primary(type="submit", value="Recipe")

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Search Movies
+
+  form(method="POST", action="/book/add")
+        #form-group 
+            label Name:
+            input.form-control(name="name", type="text")
+        
+
+    input.btn.btn-primary(type="submit", value="Search")
