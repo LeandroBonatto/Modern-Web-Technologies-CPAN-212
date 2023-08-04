@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    if user
+        h3 Welcome back #{user.name}!
+    h1 Bookstore
+    each book in books 
+        label Title:
+        a(href="/book/" + book._id) #{book.title}
+        p Author: #{book.author}
+        p Pages: #{book.pages}
+        p Rating: #{book.rating}
+        p Genres:
+        ul
+        each genre in book.genres
+            li #{genre}
+
+        br
+        br
